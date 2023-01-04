@@ -1,0 +1,7 @@
+# Возьмем за основу образ 
+FROM jupyter/datascience-notebook:python-3.10
+
+RUN mkdir /home/jovyan/dags
+
+# Запускаем 
+#ENTRYPOINT jupyterlab
