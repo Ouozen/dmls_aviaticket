@@ -50,13 +50,13 @@ services:
     build: jupyter/
     container_name: jupyter
     ports:
-      - 8888:8888
+      - "8888:8888"
     environment:
       JUPYTER_ENABLE_LAB: "yes"
       JUPYTER_TOKEN: "teR5vHZhDddq"
     volumes:
-      - ./ipynb:/home/jovyan
-      - ./airflow/dags:/home/jovyan/dags
+      - /home/ivan_admin/dmls_aviaticket/ipynb:/home/jovyan
+      - /home/ivan_admin/dmls_aviaticket/airflow/dags:/home/jovyan/dags
     networks:
       dmls:
     
