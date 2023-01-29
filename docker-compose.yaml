@@ -60,6 +60,14 @@ services:
     networks:
       dmls:
     
+    mlflow:
+    build: mlflow/
+    container_name: mlflow
+    ports:
+      - "7999:7999"
+    networks:
+      dmls:
+      
 networks:
   dmls:
     ipam:

@@ -1,0 +1,13 @@
+# пока берем последнюю версию, но возможно придется экспериментировать
+FROM python:3.10.9
+# ставим рабочую директорию
+WORKDIR /usr/src/app
+# вкидываем зависимости
+RUN pip install numpy
+RUN pip install pandas
+RUN pip install psycopg2
+# копируем файлы для БД и скрипт для записи файла в БД
+COPY ./fill_db.py .
+ENTRYPOINT python fill_db.py
+
+

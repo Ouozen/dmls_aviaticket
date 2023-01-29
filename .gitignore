@@ -1,6 +1,4 @@
-/ipynb
 /postgres
 /superset
-/fill_db
 .DS_Store
 .ipynb_checkpoints
